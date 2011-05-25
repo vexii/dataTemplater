@@ -1,0 +1,30 @@
+<script id="blog" type="x-jquery-tmpl">
+<article>
+		<header>
+			<h1>
+			${Head}</h1>
+			<time>
+			${myDate}</time>
+		</header>
+			<p>
+			${Content}</p>
+		<footer>
+			<small>
+			Made by ${Name}</small>
+			{{tmpl "blogComment" }}
+		</footer>
+</article>
+</script><script id="blogComment" type="x-jquery-tmpl">
+{{if Comments.length>0}}
+	<p>
+	der er: ${Comments.length} commentare til denne post </p>
+	{{each Comments}}
+		<article>
+			<h4>
+			${Name}</h4>
+			<p>
+			${Comment}</p>
+		</article>
+	{{/each}}
+{{/if}}
+</script>
