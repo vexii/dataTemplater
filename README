@@ -1,0 +1,17 @@
+ jQuery dataTemplater
+ Build on  jQuery 1.6.1 (Copyright 2011, John Resig)
+ jQuery Templating Plugin (Copyright 2010, John Resig) 
+ Authored by Salomon "VeXii" Sumbundu
+ 25. may 2011
+ 
+ the goal of dataTemplater is to wrap arund the official jQuery plugin "Template"
+ in such a way that it dynamically load bouth the template and the data.
+
+
+---- ROAD MAP ----
+
+1.0: 
+ -Full documentaion whith working examples.
+ -Simple and fast dataloader
+ -Template Catching
+ -Extendble
