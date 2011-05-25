@@ -4,14 +4,12 @@
  * jQuery Templating Plugin (Copyright 2010, John Resig) 
  * Authored by Salomon "VeXii" Sumbundu
  * 25. may 2011
- *
- *
  */
 (function($){
 	$.fn.dataTemplater = function (options){
 		var settings ={
 			catchedTemplates : [],
-			host: "/dataTemplater/",
+			host: "dataTemplater/",
 			templatesExtension: ".tmp.html",
 			repoExtension: ".php",
 			templateMethods:{}
@@ -38,7 +36,7 @@
 						$.template(tmpName,tmp.html());
 						settings.catchedTemplates.push(tmpName);
 					});
-				},
+				}
 			});
 		}
 		function test(){
@@ -74,8 +72,8 @@
 		return this.each(function(){
 			var obj,content,template;
 			obj = $(this);
-			content = obj.attr("x-dataHost");
-			template = obj.attr("x-templateName") || content;
+			content = obj.attr("data-host");
+			template = obj.attr("data-templateName") || content;
 			
 			if(!settings.catchedTemplates[content]){
 				catchTemplate(content);
