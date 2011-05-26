@@ -1,3 +1,3 @@
 $(function(){
-	$("#blogContainer").dataTemplater({host:"",repoExtension:".txt"});
+	$("#blogContainer").dataTemplater({host:"/",repoExtension:".txt"});
 });

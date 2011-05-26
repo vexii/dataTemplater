@@ -6,7 +6,7 @@
  * 25. may 2011
  */
 (function($){
-	$.fn.dataTemplater = function (options){
+	$.fn.dataTemplater = function (newOptions){
 		var settings ={
 			catchedTemplates : [],
 			host: "dataTemplater/",
@@ -68,11 +68,11 @@
 			});
 		}
 		
-		var options = $.extend(settings, options);
+		var options = $.extend(settings, newOptions);
 		return this.each(function(){
 			var obj,content,template;
-			obj = $(this);
-			content = obj.attr("data-host");
+			obj = $(this); //the binding object
+			content = obj.attr("data-host"); //template name
 			template = obj.attr("data-templateName") || content;
 			
 			if(!settings.catchedTemplates[content]){
